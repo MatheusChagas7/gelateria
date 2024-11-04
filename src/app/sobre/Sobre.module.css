@@ -1,6 +1,5 @@
 /*Define como vai se comportorar todo o conteudo principal*/
 .main{
-    background-color: #f9db79;
     height: 100%;
     width: 100%;
 
@@ -17,12 +16,12 @@
  o alinhamento dos elementos*/
 .container_capa{
     height: 100vh;
-    margin: auto ;
+    width: 100%;
 
-    background-image: url('@/../../../public/banner-home.png');
+    background-image: url('../../../public/banner-sobre.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
 
     display: flex;
     align-items: center;
@@ -38,51 +37,49 @@
     text-shadow: 3px 5px 2px #000;
 }
 
-/*Definição de estilos para a área de informações*/
-
-.container_info{
-    background-color: #fff;
-    width: 100%;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.card_info{
-    width: 50%;
-    height: auto;
+.container_sobre{
+    max-width: 1024px;
+    text-align: center;
+    padding: 100px 0;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 
-.card_info_imagem{
-    width: 100%;
-    height: 100%;
-    
-}
-
-.card_info h2{
-    font-size: 22px;
-}
-
-.card_info h4{
-    font-weight: 600;
+.sobre_subtitulo_slogan h4{
     font-style: italic;
 }
 
-.card_info p{
-    width: 95%;
-    font-size: 12px;
-    line-height: 25px;
-    text-align: center;
+
+.container_cards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.card_imagem{
+    height: 500px;
+    width: 50%;
+}
+
+.sobre_imagem{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Telas até 1024px*/
+@media(max-width: 1024px){
+    
+    .card_imagem{
+        height: 400px;
+    }
+
+}
 
 
 /*Telas até 768px*/
@@ -91,36 +88,28 @@
     .container_capa h1{
         font-size: 56px;
     }
-
-    .container_info{
+    
+    .container_cards{
         flex-direction: column;
     }
 
-    .card_info{
+    .card_imagem{
+        height: 500px;
         width: 100%;
-        height: 400px;
     }
 
-    .card_info p{
-        max-width: 80%;
-    }
-
-    .card_info:nth-child(3){
-        order: 4;
-    }
-
-    .card_info:nth-child(4){
-        order: 3;
-    }
 }
 
 
 /*Telas até 375px*/
-
 @media(max-width: 375px){
-    
+
     .container_capa h1{
-        font-size: 36px;
+        font-size: 42px;
+    }
+
+    .card_imagem{
+        height: 300px;
     }
 
 }

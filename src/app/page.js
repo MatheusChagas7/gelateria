@@ -1,95 +1,68 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import estilos from "./page.module.css";
+
+import Sabores from "/public/banner-sabores.jpg"
+import Eventos from "/public/eventos-image.jpg"
+import Sobre from "/public/sobre-image.jpg"
+
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className={estilos.main}>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      <div className={estilos.container_capa}>
+        <h1>SORVETE ARTESANAL</h1>
+      </div>
+
+      <div className={estilos.container_info}>
+
+        <div className={estilos.card_info}>
+          <Image className={estilos.card_info_imagem} src={Sabores} alt="Sabores de diversos sorvetes"></Image>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className={estilos.card_info}>
+          <h2>NOSSOS SABORES</h2>
+          <h4>Novos e deliciosos!</h4>
+          <p>
+            Sorvete bom é aquele feito com os melhores ingredientes! 
+            Aqui na gelateria todos os nossos produtos são naturais, à base de frutas e sem 
+            nenhum conservante! Também temos opções sem lactose e sem açúcar. 
+            Venha conhecer e perceber que tem como o sorvete ser delicioso e saudável ao mesmo tempo!
+          </p>
+        </div>
+
+        <div className={estilos.card_info}>
+          <h2>NOSSOS EVENTOS</h2>
+          <h4>Delicias com sorvete!</h4>
+          <p>
+            Mais do que uma sorveteria, uma extensão da sua casa! Estamos aqui 
+            prontinhos para te atender e oferecer os melhores eventos com os 
+            melhores sorvetes da sua vida! Venha nos conhecer e passar um tempo 
+            aqui com a gente.
+          </p>
+        </div>
+
+        <div className={estilos.card_info}>
+          <Image className={estilos.card_info_imagem} src={Eventos} alt="Sabores de diversos sorvetes"></Image>
+        </div>
+
+        <div className={estilos.card_info}>
+          <Image className={estilos.card_info_imagem} src={Sobre} alt="Sabores de diversos sorvetes"></Image>
+        </div>
+        
+        <div className={estilos.card_info}>
+          <h2>SOBRE NÓS</h2>
+          <h4>Alegria em cada casquinha!</h4>
+          <p>
+            Venha tomar o melhor sorvete da região aqui com a gente! Nós estamos 
+            há anos no mercado produzindo o que tem de melhor para o nosso cliente 
+            e você não pode ficar de fora dessa. Venha nos fazer uma visita e aproveite 
+            o melhor atendimento e o melhor sorvete da cidade.
+          </p>
+        </div>
+
+      </div>
+
+    </main>
   );
 }

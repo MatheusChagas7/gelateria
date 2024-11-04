@@ -1,0 +1,75 @@
+.footer{
+    background-color: #000;
+}
+
+.contato, .autor{
+    max-width: 1024px;
+}
+
+.contato{
+    margin: 0 auto;
+    padding: 80px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cards_container{
+    width: 80%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+
+.card_contato{
+    max-width: 180px;
+    color: #fff;
+    line-height: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.card_contato h4{
+    font-weight: 600;
+}
+
+
+.autor{
+    padding: 15px 0;
+    margin: 0 auto;
+}
+
+
+.autor p{
+    color: #fff;
+    text-align: center;
+}
+
+
+
+/*Telas até 768px*/
+@media(max-width: 768px){
+
+    .contato{
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .cards_container{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px
+    }
+
+    .card_contato{
+        max-width: 250px;
+        text-align: center;
+        align-items: center;
+    }
+    
+}

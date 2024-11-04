@@ -1,6 +1,5 @@
 /*Define como vai se comportorar todo o conteudo principal*/
 .main{
-    background-color: #f9db79;
     height: 100%;
     width: 100%;
 
@@ -17,12 +16,12 @@
  o alinhamento dos elementos*/
 .container_capa{
     height: 100vh;
-    margin: auto ;
+    width: 100%;
 
-    background-image: url('@/../../../public/banner-home.png');
+    background-image: url('../../../public/banner-sabores.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
 
     display: flex;
     align-items: center;
@@ -38,89 +37,65 @@
     text-shadow: 3px 5px 2px #000;
 }
 
-/*Definição de estilos para a área de informações*/
 
-.container_info{
-    background-color: #fff;
-    width: 100%;
+.container_sabores{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    padding: 100px 0;
+}
+
+.container_cards{
+    max-width: 1024px;
+    margin: 0 auto;
 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 15px;
 }
 
-.card_info{
-    width: 50%;
-    height: auto;
-
+.card_sabor{
+    height: 400px;
+    width: 300px;
+    text-align: center;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
+
+    box-shadow: 1px 1px 4px 1px #8d8c8c;
+    border-radius: 5px;
+    padding: 0 10px;
 }
 
-.card_info_imagem{
-    width: 100%;
-    height: 100%;
-    
+.imagem_card{
+    height: 60%;
+    width: auto;
 }
 
-.card_info h2{
-    font-size: 22px;
-}
-
-.card_info h4{
-    font-weight: 600;
-    font-style: italic;
-}
-
-.card_info p{
-    width: 95%;
-    font-size: 12px;
-    line-height: 25px;
-    text-align: center;
-}
-
-
-
-/*Telas até 768px*/
 @media(max-width: 768px){
 
     .container_capa h1{
         font-size: 56px;
     }
 
-    .container_info{
-        flex-direction: column;
-    }
-
-    .card_info{
+    .container_sabores{
         width: 100%;
-        height: 400px;
     }
 
-    .card_info p{
-        max-width: 80%;
+    .container_cards{
+        flex-direction: column;
+        width: 100%;
     }
 
-    .card_info:nth-child(3){
-        order: 4;
+    .card_sabor{
+        width: 95%;
     }
-
-    .card_info:nth-child(4){
-        order: 3;
-    }
-}
-
-
-/*Telas até 375px*/
-
-@media(max-width: 375px){
-    
-    .container_capa h1{
-        font-size: 36px;
-    }
-
 }
