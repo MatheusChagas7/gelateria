@@ -1,4 +1,4 @@
-<p>Você pode visualizar o projeto clicando <a href="https://vercel.com/matheus-balduino-chagas-projects/gelateria">aqui</a></p>
+<p>Você pode visualizar o projeto clicando <a href="https://gelateria-eight-zeta.vercel.app/">aqui</a></p>
 
 Este é um projeto [Next.js](https://nextjs.org) inicializado com [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
